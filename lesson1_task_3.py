@@ -12,7 +12,7 @@ def input_integer():
             print('Error! signature you have typed is not a number!')
 
 count = 0
-tmp = user_input = input_integer()
+user_input = input_integer()
 
 nn_div = 10 ** count + 1
 nnn_div = (10 ** (count * 2)) + nn_div
