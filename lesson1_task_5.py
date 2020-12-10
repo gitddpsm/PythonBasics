@@ -5,32 +5,28 @@ def input_integer():
     # Проверяет ввод, возвращает введенное число 
     # Дает возможность повторить ввод при ошибке
     while True:
-        _input = input('\nEnter a number:\n')   
+        _input = input()   
         if _input.isdigit():
             _input = int(_input)
             return _input
         else:
-            print('Error! signature you have typed is not a number!')
+            print('Error! signature you have typed is not a number!\n')
 
-print('укажите объем выручки:\n')
-revenue = input_integer() # Выручка
-print('укажите объем издержек:\n')
-cost = input_integer() # Издержки
-# Прибыль = выручка - издержки
-profit = revenue - cost
+print('\nУкажите объем выручки:')
+revenue = input_integer()                         # Выручка
+print('\nУкажите объем издержек:')
+cost = input_integer()                            # Издержки
+profit = revenue - cost                           # Прибыль = выручка - издержки
 
 if revenue < cost:
-    print('убыток — издержки больше')
+    print('\nУбыток — издержки больше')
 else:
-    print('прибыль — выручка больше издержек') 
-    # Рентабельность = выручка/прибыль
-    profitability = revenue / profit
-    # Запрос числа сотрудников
-    print('укажите количество сотрудников:')
+    print('\nПрибыль — выручка больше издержек')  # Рентабельность = выручка/прибыль
+    profitability = revenue / profit              # Запрос числа сотрудников
+    print('\nУкажите количество сотрудников:')
     staff = input_integer()
-    # Вычислить прибыль / число сотрудников
-    print('На одного сотрудника прибыль составляет\n')
-    print((profit / staff) + " у.е.\n")
-    print(f'а рентабельность составляет {profitability} у.е.')
 
-
+'''  (Вычислить) прибыль на 1 сотрудника = прибыль / число сотрудников '''
+print("На одного сотрудника прибыль составляет")
+print(str(round(profit / staff, 2)) + " у.е.\n")
+print(f'#DBG рентабельность = {profitability}')
