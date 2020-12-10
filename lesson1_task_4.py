@@ -20,3 +20,14 @@ while user_num and result != 9:
     user_num //= 10
 
 print(result)
+
+# Вариант 2
+
+user_num = str(input_integer())
+result = 9
+while result:
+    if str(result) in user_num:
+        break
+    result -= 1
+
+print(result)
