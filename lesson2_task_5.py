@@ -5,20 +5,19 @@
 Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 Набор натуральных чисел можно задать непосредственно в коде, например, my_list = [7, 5, 3, 3, 2]."""
 
-def my_rates(dd, value):
-    max_value = max(dd)
-    if value > max_value:
-        dd.insert(0,value)
-    elif value in dd:
-        print(f'(-dd[::-1].index(value)')
-        print(-dd[::-1].index(value))
-        dd.insert(-dd[::-1].index(value), value)
+def my_rates(dd, us_input):
+    max_val = max(dd)
+    if us_input > max_val:
+        dd.insert(0,us_input)
+    elif us_input in dd:
+        dd.insert(-dd[::-1].index(us_input), us_input)
     else:
-        dd.append(value)
+        dd.append(us_input)
         
 my_list = [7, 5, 3, 3, 2]
-print(my_list)
 my_rates(my_list, 77)
-print(my_list)
 my_rates(my_list, 6)
+my_rates(my_list, 4)
+my_rates(my_list, 4)
+my_rates(my_list, 5)
 print(my_list)
