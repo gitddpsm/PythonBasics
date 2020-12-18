@@ -5,7 +5,7 @@ def my_func(x, y):
     outout = x ** y
     return outout
 
-print(my_func(6, 2))
+print(my_func(2, -2))
 
 def fastExp(b, n):
     def even(n):  #проверка четности
@@ -18,4 +18,16 @@ def fastExp(b, n):
         return fastExp(b, n/2)**2
     return b*fastExp(b, n-1)
 
-print(fastExp(0, 0 ))
+print(fastExp(2, 0))
+
+def negative_exp(x, y):
+    result = 1
+    for el in range(abs(y)):
+        result *= x
+    if y >= 0:
+        return result
+    else: 
+        return 1 / result
+
+print(negative_exp(2, -2))
+        
