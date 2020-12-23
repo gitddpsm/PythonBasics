@@ -11,6 +11,17 @@ def mass_titles(words_string):
         out_str = (f'{out_str} {int_func(el)}')
     return out_str
 
+
 print(mass_titles('sdjfh sdkjhfkj dskjhf eqwrio qwp'))    
+
+
+def int_func_exampl(string: str):
+    return ''.join((string[0].upper(), string[1:])) if string else string
+
+def user_temp(string: str):
+    return ''.join(map(int_func_exampl, string.split('')))
+
+
+assert int_func_exampl('') == '', "int_func('')"
 
 input('ok >')
