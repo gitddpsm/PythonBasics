@@ -19,9 +19,14 @@ def int_func_exampl(string: str):
     return ''.join((string[0].upper(), string[1:])) if string else string
 
 def user_temp(string: str):
-    return ''.join(map(int_func_exampl, string.split('')))
+    return ' '.join(map(int_func_exampl, string.split(' ')))
 
 
+assert int_func_exampl('рокетлаунчер') == 'Рокетлаунчер', "int_func('рокетлаунчер')"
+assert int_func_exampl('кваддамейдж') == 'Кваддамейдж', "int_func('кваддамейдж')"
 assert int_func_exampl('') == '', "int_func('')"
 
-input('ok >')
+print(user_temp('бабка переходит дорогу')) 
+#assert user_temp('бабка переходит дорогу') == 'Бабка Переходит Дорогу', "user_temp('бабка переходит дорогу')"
+
+#input('ok >')
