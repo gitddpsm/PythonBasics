@@ -14,5 +14,4 @@ for i in range(1,len(rnd_lis)):
         new_lis.append(rnd_lis[i])
 
 print(new_lis)
-
 exit()
