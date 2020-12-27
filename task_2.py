@@ -3,3 +3,16 @@
 Пример исходного списка: [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55].
 Результат: [12, 44, 4, 10, 78, 123].
 '''
+from random import randint
+
+rnd_lis = [randint(0,100) for i in range(30)]
+
+
+new_lis = []
+for i in range(1,len(rnd_lis)):
+    if rnd_lis[i]>rnd_lis[i-1]:
+        new_lis.append(rnd_lis[i])
+
+print(new_lis)
+
+exit()
