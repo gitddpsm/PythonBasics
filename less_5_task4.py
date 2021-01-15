@@ -20,6 +20,7 @@ replace_cheme = {
 write_line = ''
 with open(mfile_full_path, 'w', encoding='UTF-8') as file_out:
     print('Clear out File')
+    file_out.close()
 
 with open(file_full_path, 'r', encoding='UTF-8') as file_in:
     for line in file_in:
