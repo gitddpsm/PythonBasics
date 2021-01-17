@@ -5,6 +5,7 @@ from random import randint
 from os import path
 
 file_path = path.join(path.dirname(__file__), 'generated')
+
 number_list = [randint(1, 20) for i in range(randint(5,10))]
 nums_string = ' '.join(str(el) for el in number_list)
 

@@ -11,21 +11,20 @@
 from random import randint
 from os import path
 
-file_content = []
+file_content = {}
 with open(path.join(path.dirname(__file__), 'learn_plan'), 'r', encoding='UTF-8') as file:
     for line in file:
-        file_content.append(line)
-print(content)
+        line_content = line.split(':')
+        file_content[line_content[0]] = line_content[1].split()
 
-'''
-number_list = [randint(1, 20) for i in range(randint(5,10))]
-nums_string = ' '.join(str(el) for el in number_list)
+output_dict = {}
+for key,value in file_content.items():
+    output_dict[key] = 0
+    for item in value:
+        try:
+            output_dict[key] += int(item.split('(')[0])
+        except ValueError:
+            continue    
 
-
-summ = 0    
-with open(file_path, 'r') as file:
-    for line in file:
-        for x in line.split(' '):
-           summ += int(x)
-print(summ)
-'''
+print(output_dict) 
+                 
