@@ -14,7 +14,5 @@ class TrafficLight:
         for el in i_cycle(zip(self.__colors, timer)):
             print(el)
             self.__color = el[0]
-#            sec = el[1]
             print(self.__color)
-#            time.sleep(sec)
             time.sleep(el[1])
