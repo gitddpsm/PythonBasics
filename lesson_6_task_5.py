@@ -2,42 +2,48 @@
 '''
 class Stationery:
     ''' (канцелярская принадлежность). '''
-    title = "название" 
+    def __init__(self, title = 'default'):
+        self.title = title
     def draw(self):
         '''(отрисовка). Метод выводит сообщение “Запуск отрисовки.” '''
         print("“Запуск отрисовки.”")
+    
         
 #Создать три дочерних класса 
 class Pen(Stationery): 
     '''(ручка) 
     переопределение метода draw.    '''
-    def draw(self, item = "ручка"):
-        print(f"“Запуск отрисовки:\n item 1 = {item} ”")
+    def __init__(self):
+        super().__init__('pen')
+    def draw(self, item:str = 'текст'):
+        print(f" {self.title} написан {item} ”")
 
 class Pencil(Stationery): 
-    '''(карандаш) 
-    переопределение метода draw. '''
-    def draw(self, item = "карандаш"):
-        print(f"“Запуск отрисовки:\n item 2 = {item} ”")
-
+    '''(карандаш) '''
+    def __init__(self):
+        super().__init__('pencil')
+    def draw(self):
+        print(f" item 3 = {self.title} ”")
 
 class Handle(Stationery): 
-    ''' (маркер) 
-    переопределение метода draw. '''
-    def draw(self, item = "маркер"):
-        print(f"“Запуск отрисовки:\n item 2 = {item} ”")
-
+    ''' (маркер) '''
+    def __init__(self):
+        super().__init__('маркер')
+    def draw(self):
+        print(f" item 3 = {self.title} ”")
         
 '''        Создать экземпляры классов и проверить, 
         что выведет описанный метод для каждого экземпляра.'''
 
 stationery = Stationery()
 stationery.draw()
-
 pen = Pen()
+pen.draw()
 pencil = Pencil()
+pencil.draw()
 handle = Handle()
 
-pen.draw('square')
-pencil.draw('round')
-handle.draw('triangle')
+handle.draw() 
+pen.draw('test text for pen')
+'''
+'''
