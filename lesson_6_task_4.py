@@ -35,8 +35,8 @@ class Car:
 class TownCar(Car): 
     ''' TownCar переопределите метод show_speed. При значении скорости свыше 60 (TownCar)  должно выводиться сообщение о превышении скорости.'''
     def show_speed(self):
-        if self.speed > 60:
-            print(f'Warning speed > 60')
+        if self.speed > 40:
+            print(f'Warning speed > 40')
         super().show_speed()
 
 
